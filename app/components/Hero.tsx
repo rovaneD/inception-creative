@@ -9,8 +9,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover object-center"
       >
-        <source src="/InceptionHeroMov.mov" type="video/quicktime" />
-        <source src="/InceptionHeroMov.mov" type="video/mp4" />
+        <source src="/InceptionHeroMov.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-black/10" />
 

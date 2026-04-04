@@ -42,4 +42,3 @@ next-env.d.ts
 
 # Large media files (host on CDN instead)
 public/*.mov
-public/*.mp4
