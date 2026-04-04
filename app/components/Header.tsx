@@ -25,12 +25,19 @@ export default function Header({ overlay = false }: { overlay?: boolean }) {
       }`}
     >
       <nav className="max-w-[1440px] mx-auto px-6 md:px-20 h-[72px] md:h-[119px] flex items-center justify-between">
-        <a
-          href="/"
-          className="text-[22px] md:text-[26px] font-medium text-[#0a0a0a] tracking-[-0.025em] leading-tight"
-          style={{ fontFamily: "var(--font-inter)" }}
-        >
-          inception
+        <a href="/" className="flex flex-col gap-0.5">
+          <span
+            className="text-[22px] md:text-[26px] font-medium text-[#0a0a0a] tracking-[-0.025em] leading-tight"
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            inception
+          </span>
+          <span
+            className="text-[11px] md:text-[13px] text-[#0a0a0a] leading-tight"
+            style={{ fontFamily: "var(--font-cormorant)" }}
+          >
+            Where beauty brands begin.
+          </span>
         </a>
 
         {/* Desktop nav */}
