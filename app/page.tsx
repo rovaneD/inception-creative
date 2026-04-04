@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header overlay />
-      <main>
+      <main className="grow-0 shrink-0">
         <Hero />
       </main>
       <Footer />
