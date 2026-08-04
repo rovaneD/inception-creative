@@ -14,12 +14,13 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 pb-10 md:pb-[50px] border-b border-[#e5e7eb]">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 flex flex-col gap-3">
-            <span
-              className="text-[22px] md:text-[26px] font-medium text-[#0a0a0a] leading-[39px]"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              inception
-            </span>
+            <a href="/">
+              <img
+                src="/Inception%202.png"
+                alt="Inception"
+                className="h-[20px] md:h-[24px] w-auto"
+              />
+            </a>
             <span
               className="text-[14px] text-[#0a0a0a] leading-[21px]"
               style={{ fontFamily: "var(--font-cormorant)" }}
