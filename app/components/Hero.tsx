@@ -12,7 +12,7 @@ export default function Hero() {
             playsInline
             className="absolute inset-0 h-full w-full object-cover object-center"
           >
-            <source src="/InceptionHeroMov.mp4" type="video/mp4" />
+            <source src="/Inception%20Cut%203%201080.mp4" type="video/mp4" />
           </video>
           <div className="pointer-events-none absolute inset-0 bg-black/10" />
         </div>
