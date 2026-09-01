@@ -18,8 +18,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* NAVIGATE — bottom of hero block */}
-      <div className="absolute bottom-10 left-0 right-0 z-10 flex justify-center md:bottom-16">
+      {/* NAVIGATE — desktop only */}
+      <div className="hidden md:flex absolute bottom-10 left-0 right-0 z-10 justify-center md:bottom-16">
         <a href="/work" className="flex flex-col items-center gap-1 group">
           <span
             className="text-[11px] font-medium text-[#000000] tracking-[0.05em] leading-[16.5px]"
