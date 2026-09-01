@@ -6,34 +6,38 @@ const projects = [
   {
     num: "01",
     tag: "CAMPAIGN IDENTITY",
-    name: "Ole Henriksen",
-    projectName: "Project Name",
-    description: "About the project here",
-    image: null,
+    name: "Allies of Skin",
+    projectName: "Allies of Skin",
+    description: "Campaign · Creative Direction",
+    image: "/work/allies-of-skin/featured.jpg",
+    href: "/work/allies-of-skin",
   },
   {
     num: "02",
     tag: "PACKAGING CAMPAIGN",
     name: "Bite Beauty",
-    projectName: "Project Name",
-    description: "About the project here",
+    projectName: "Bite Beauty",
+    description: "Packaging Campaign",
     image: null,
+    href: undefined,
   },
   {
     num: "03",
     tag: "IDENTITY DIGITAL",
     name: "Dr. Lancer",
-    projectName: "Project Name",
-    description: "About the project here",
+    projectName: "Dr. Lancer",
+    description: "Identity · Digital",
     image: null,
+    href: undefined,
   },
   {
     num: "04",
     tag: "CONCEPT TO LAUNCH",
     name: "Paula's Choice",
-    projectName: "Project Name",
-    description: "About the project here",
+    projectName: "Paula's Choice",
+    description: "Concept to Launch",
     image: null,
+    href: undefined,
   },
 ];
 
@@ -46,7 +50,10 @@ export default function FeaturedWork() {
       <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {/* Featured project — top on mobile, left on desktop */}
         <div className="flex flex-col gap-4 w-full lg:w-[704px] lg:shrink-0">
-          <div className="w-full h-[280px] sm:h-[380px] md:h-[504px] bg-[#f3f4f6] overflow-hidden">
+          <a
+            href={active.href ?? "#"}
+            className={`w-full h-[280px] sm:h-[380px] md:h-[504px] bg-[#f3f4f6] overflow-hidden block ${active.href ? "" : "pointer-events-none"}`}
+          >
             {active.image ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -57,14 +64,24 @@ export default function FeaturedWork() {
             ) : (
               <div className="w-full h-full bg-[#f3f4f6]" />
             )}
-          </div>
+          </a>
           <div className="flex flex-col gap-1">
-            <span
-              className="text-[17px] md:text-[19px] font-medium text-[#0a0a0a] leading-[28.5px]"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              {active.projectName}
-            </span>
+            {active.href ? (
+              <a
+                href={active.href}
+                className="text-[17px] md:text-[19px] font-medium text-[#0a0a0a] leading-[28.5px] hover:opacity-60 transition-opacity w-fit"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {active.projectName}
+              </a>
+            ) : (
+              <span
+                className="text-[17px] md:text-[19px] font-medium text-[#0a0a0a] leading-[28.5px]"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {active.projectName}
+              </span>
+            )}
             <span
               className="text-[14px] text-[#0a0a0a] leading-[21px]"
               style={{ fontFamily: "var(--font-cormorant)" }}
